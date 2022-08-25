@@ -5,7 +5,8 @@ const db = config.get("mongoURI");
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
-      useNewUrlParser: true, // para corregir error de video, no me aplicaba
+      //  useNewUrlParser: true, // para corregir error de video, no me aplicaba
+      //  useCreateIndex: true,
     });
     console.log("MongoDB Connected...");
   } catch (err) {
