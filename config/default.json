@@ -1,4 +1,6 @@
 {
     "mongoURI":"mongodb+srv://anuarchb:anuarchb@cluster0.5wra7fb.mongodb.net/?retryWrites=true&w=majority",
-    "jwtSecret":"mysecrettoken"
+    "jwtSecret":"mysecrettoken",
+    "githubClientId":"ca120ddc8db09c1abb2d",
+    "githubSecret": "6efe49d3c6615f8d5b0aea038a4bfc95f7b055d8"
 }
