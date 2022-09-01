@@ -1,5 +1,4 @@
 import axios from "axios";
-import { defaults } from "request";
 
 const setAuthToken = (token) => {
   if (token) {
