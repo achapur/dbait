@@ -1,3 +1,5 @@
+import { GET_PROFILE, PROFILE_ERROR } from "../actions/types";
+
 const initialState = {
   profile: null,
   profiles: [],
@@ -21,6 +23,7 @@ export default function (state = initialState, action) {
         ...state,
         error: payload,
         loading: false,
+        profile: null,
       };
     default:
       return state;

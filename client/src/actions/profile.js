@@ -1,13 +1,16 @@
 import axios from "axios";
+import api from "../utils/api";
 import { setAlert } from "./alert";
 
-import { GET_PROFILE, GTE_PROFILE, PROFILE_ERROR } from "./types";
+import { GET_PROFILE, PROFILE_ERROR } from "./types";
 
 //Get current users profile
 
 export const getCurrentProfile = () => async (dispatch) => {
   try {
     const res = await axios.get("/api/profile/me");
+    // const res = api axios.get("/api/profile/me");
+
     dispatch({
       type: GET_PROFILE,
       payload: res.data,
