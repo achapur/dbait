@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import api from "../utils/api";
 import { setAlert } from "./alert";
 
@@ -27,7 +26,7 @@ export const getCurrentProfile = () => async (dispatch) => {
 // create or update a profile
 
 export const createProfile =
-  (formData, history, edit = false) =>
+  (formData, navigate, edit = false) =>
   async (dispatch) => {
     try {
       const config = {
@@ -46,7 +45,7 @@ export const createProfile =
       );
 
       if (!edit) {
-        history.pushState("/dashboard");
+        navigate("/dashboard");
       }
     } catch (err) {
       const errors = err.response.data.errors;

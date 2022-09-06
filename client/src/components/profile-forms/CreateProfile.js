@@ -20,7 +20,7 @@ const CreateProfile = ({ createProfile, history }) => {
     instagram: "",
   });
 
-  const navigateToDashboard = useNavigate("/dashboad");
+  const navigate = useNavigate();
 
   const {
     company,
@@ -42,7 +42,7 @@ const CreateProfile = ({ createProfile, history }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    createProfile(formData, navigateToDashboard, history);
+    createProfile(formData, navigate);
   };
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
