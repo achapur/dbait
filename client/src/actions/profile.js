@@ -44,9 +44,9 @@ export const createProfile =
         setAlert(edit ? "Profile Updated" : "Profile Created", "success")
       );
 
-      if (!edit) {
-        navigate("/dashboard");
-      }
+      //if (!edit) {
+      navigate("/dashboard");
+      // }
     } catch (err) {
       const errors = err.response.data.errors;
       if (errors) {
