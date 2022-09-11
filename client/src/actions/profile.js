@@ -50,6 +50,23 @@ export const getProfiles = () => async (dispatch) => {
   }
 };
 
+// Get profile by ID
+export const getProfileById = (userId) => async (dispatch) => {
+  try {
+    const res = await api.get(`/profile/user/${userId}`);
+
+    dispatch({
+      type: GET_PROFILE,
+      payload: res.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
 // Get Github Repos
 
 export const getGithubRepos = (username) => async (dispatch) => {
@@ -205,7 +222,6 @@ export const deleteAccount = () => async (dispatch) => {
   if (window.confirm("Are you sure? This can not be undone")) {
   }
   try {
-    const res = await axios.delete(`/api/profile`);
     dispatch({ type: CLEAR_PROFILE });
     dispatch({ type: ACCOUNT_DELETED });
 
