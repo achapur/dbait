@@ -39,23 +39,23 @@ const App = () => {
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route
-                path="/dashboard"
+                path="dashboard"
                 element={<PrivateRoute component={Dashboard} />}
               />
               <Route
-                path="/create-profile"
+                path="create-profile"
                 element={<PrivateRoute component={CreateProfile} />}
               />
               <Route
-                path="/edit-profile"
+                path="edit-profile"
                 element={<PrivateRoute component={EditProfile} />}
               />
               <Route
-                path="/add-experience"
+                path="add-experience"
                 element={<PrivateRoute component={AddExperience} />}
               />
               <Route
-                path="/add-education"
+                path="add-education"
                 element={<PrivateRoute component={AddEducation} />}
               />
             </Routes>
