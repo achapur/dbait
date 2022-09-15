@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import formatDate from "../../utils/formatDate";
@@ -23,7 +23,7 @@ const Education = ({ education, deleteEducation }) => {
     </tr>
   ));
   return (
-    <Fragment>
+    <section className="container">
       <h2 className="my-2">Education Credentials</h2>
       <table className="table">
         <thead>
@@ -36,7 +36,7 @@ const Education = ({ education, deleteEducation }) => {
         </thead>
         <tbody>{educations}</tbody>
       </table>
-    </Fragment>
+    </section>
   );
 };
 

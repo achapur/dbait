@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getCurrentProfile, deleteAccount } from "../../actions/profile";
@@ -20,13 +20,13 @@ const Dashboard = ({
   return loading && profile == null ? (
     <Spinner />
   ) : (
-    <Fragment>
+    <section className="container">
       <h1 className="large text-primary">Dashboard </h1>
       <p className="lead">
         <i className="fas fa-user"> Welcome {user && user.name}</i>
       </p>
       {profile !== null ? (
-        <Fragment>
+        <section className="container">
           <DashboardActions />
           <Experience experience={profile.experience} />
           <Education education={profile.education} />
@@ -35,16 +35,16 @@ const Dashboard = ({
               <i className="fas fa-user-minus">Delete My Account</i>
             </button>
           </div>
-        </Fragment>
+        </section>
       ) : (
-        <Fragment>
+        <section className="container">
           <p>You have not yet setup a profile, please add some info</p>
           <Link to="/create-profile" className="btn btn-primary my-1">
             Create Profile
           </Link>
-        </Fragment>
+        </section>
       )}
-    </Fragment>
+    </section>
   );
 };
 

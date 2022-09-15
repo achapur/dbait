@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -25,7 +25,7 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <Fragment>
+    <section className="container">
       <section className="container">
         <h1 className="large text-primary">Sign In</h1>
         <p className="lead">
@@ -58,7 +58,7 @@ const Login = ({ login, isAuthenticated }) => {
           Don´t have an account? <Link to="/register">Sign Up</Link>
         </p>
       </section>
-    </Fragment>
+    </section>
   );
 };
 

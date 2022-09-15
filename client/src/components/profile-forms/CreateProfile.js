@@ -48,10 +48,10 @@ const CreateProfile = ({ createProfile, history }) => {
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
 
   return (
-    <Fragment>
-      <h1 class="large text-primary">Create Your Profile</h1>
-      <p class="lead">
-        <i class="fas fa-user"></i> Let's get some information to make your
+    <section className="container">
+      <h1 className="large text-primary">Create Your Profile</h1>
+      <p className="lead">
+        <i className="fas fa-user"></i> Let's get some information to make your
         profile stand out
       </p>
       <small>* required field</small>
@@ -155,7 +155,7 @@ const CreateProfile = ({ createProfile, history }) => {
         </div>
 
         {displaySocialInputs && (
-          <Fragment>
+          <section className="container">
             <div className="form-group social-input">
               <i className="fab fa-twitter fa-2x"></i>
               <input
@@ -210,7 +210,7 @@ const CreateProfile = ({ createProfile, history }) => {
                 onChange={(e) => onChange(e)}
               />
             </div>
-          </Fragment>
+          </section>
         )}
 
         <input type="submit" className="btn btn-primary my-1" />
@@ -218,7 +218,7 @@ const CreateProfile = ({ createProfile, history }) => {
           Go Back
         </Link>
       </form>
-    </Fragment>
+    </section>
   );
 };
 

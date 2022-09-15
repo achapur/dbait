@@ -16,11 +16,11 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
     getProfileById(id);
   }, [getProfileById, id]);
   return (
-    <Fragment>
+    <section className="container">
       {profile === null || loading ? (
         <Spinner />
       ) : (
-        <Fragment>
+        <section className="container">
           <Link to="/profiles" className="btn btn-light">
             Back to Profiles
           </Link>
@@ -31,20 +31,20 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
                 Edit Profile
               </Link>
             )}
-          <div class="profile-grid my-1">
+          <div className="profile-grid my-1">
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
             <div className="profile-exp bg-white pp-2">
               <h2 className="text-primary">Experience</h2>
               {profile.experience.length > 0 ? (
-                <Fragment>
+                <section className="container">
                   {profile.experience.map((experience) => (
                     <ProfileExperience
                       key={experience}
                       experience={experience}
                     />
                   ))}
-                </Fragment>
+                </section>
               ) : (
                 <h4>No experience credentials</h4>
               )}
@@ -52,11 +52,11 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
             <div className="profile-edu bg-white pp-2">
               <h2 className="text-primary">Education</h2>
               {profile.education.length > 0 ? (
-                <Fragment>
+                <section className="container">
                   {profile.education.map((education) => (
                     <ProfileEducation key={education} education={education} />
                   ))}
-                </Fragment>
+                </section>
               ) : (
                 <h4>No education credentials</h4>
               )}
@@ -66,9 +66,9 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
               <ProfileGithub username={profile.githubusername} />
             )}
           </div>
-        </Fragment>
+        </section>
       )}
-    </Fragment>
+    </section>
   );
 };
 
