@@ -225,7 +225,7 @@ img {
 
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0;
   left: 0;
@@ -332,7 +332,7 @@ button {
 /* Landing Page */
 .landing {
   position: relative;
-  /*background: url("./img/Hero.jpg") no-repeat center center/cover;*/
+  background: url("../public/Hero.jpg") no-repeat center center/cover;
   height: 100vh;
 }
 
