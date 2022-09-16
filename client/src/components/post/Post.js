@@ -1,7 +1,7 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import PostItem from "../posts/PostItem";
 import CommentForm from "../post/CommentForm";
@@ -13,6 +13,7 @@ const Post = ({ getPost, post: { post, loading } }) => {
   useEffect(() => {
     getPost(id);
   }, [getPost, id]);
+
   return loading || post === null ? (
     <Spinner />
   ) : (
