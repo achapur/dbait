@@ -59,17 +59,17 @@ const CreateProfile = ({ createProfile, history }) => {
         <div className="form-group">
           <select name="status" value={status} onChange={(e) => onChange(e)}>
             <option value="0">* Select Professional Status</option>
-            <option value="Developer">Developer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
-            <option value="Manager">Manager</option>
-            <option value="Student or Learning">Student or Learning</option>
-            <option value="Instructor">Instructor or Teacher</option>
-            <option value="Intern">Intern</option>
+            <option value="Dr.">Dr.</option>
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Business Owner">Business Owner</option>
+            <option value="Professional Athlete">Professional Athlete</option>
+            <option value="Professional Coach">Professional Coach</option>
+            <option value="Influencer">Influencer</option>
             <option value="Other">Other</option>
           </select>
           <small className="form-text">
-            Give us an idea of where you are at in your career
+            Please specify your degree or credentials
           </small>
         </div>
         <div className="form-group">
@@ -117,17 +117,18 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={(e) => onChange(e)}
           />
           <small className="form-text">
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values (eg. foreign policy, migration,
+            sports)
           </small>
         </div>
         <div className="form-group">
-          <input
+          {/* <input
             type="text"
             placeholder="Github Username"
             name="githubusername"
             value={githubusername}
             onChange={(e) => onChange(e)}
-          />
+          /> */}
           <small className="form-text">
             If you want your latest repos and a Github link, include your
             username

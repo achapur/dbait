@@ -15,10 +15,10 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <section className="container">
-          <h1 className="large text-primary">Developers</h1>
+          <h1 className="large text-primary">DBaiters</h1>
           <p className="lead">
             <i className="fab fa-connectdevelop"></i>
-            Browse and connect with developers
+            Browse and connect with DBaiters
           </p>
           <div className="profiles">
             {profiles.length > 0 ? (
